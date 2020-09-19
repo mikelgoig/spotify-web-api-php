@@ -3,8 +3,6 @@
 ## Constants
 * **ACCOUNT_URL**
 * **API_URL**
-* **RETURN_ASSOC**
-* **RETURN_OBJECT**
 
 ## Methods
 ### __construct
@@ -86,21 +84,6 @@ Get the latest full response from the Spotify API.
     * string url The requested URL.
 
 ---
-### getReturnType
-
-_Deprecated_
-
-```php
-Request::getReturnType()
-```
-
-Use the `return_assoc` option instead.
-
-
-#### Return values
-* **string** A value indicating if the response body is an object or associative array.
-
----
 ### send
 
 
@@ -125,25 +108,6 @@ You'll probably want to use one of the convenience methods instead.
     * string url The requested URL.
 
 ---
-### setCurlOptions
-
-_Deprecated_
-
-```php
-Request::setCurlOptions($options)
-```
-
-Use the `curl_options` option instead.<br>
-<br>
-Any options passed here will be merged with the defaults, overriding existing ones.
-
-#### Arguments
-* `$options` **array** - Any available cURL option.
-
-#### Return values
-* **void** 
-
----
 ### setOptions
 
 
@@ -155,23 +119,6 @@ Set options
 
 #### Arguments
 * `$options` **array\|object** - Options to set.
-
-#### Return values
-* **void** 
-
----
-### setReturnType
-
-_Deprecated_
-
-```php
-Request::setReturnType($returnType)
-```
-
-Use the `return_assoc` option instead.
-
-#### Arguments
-* `$returnType` **string** - One of the Request::RETURN_* constants.
 
 #### Return values
 * **void** 

@@ -1,8 +1,6 @@
 # SpotifyWebAPI
 
 ## Constants
-* **RETURN_ASSOC**
-* **RETURN_OBJECT**
 
 ## Methods
 ### __construct
@@ -91,7 +89,7 @@ Add tracks to a playlist.<br>
 
 
 #### Return values
-* **boolean** Whether the tracks was successfully added.
+* **string\|boolean** A new snapshot ID or false if the tracks weren&#039;t successfully added.
 
 ---
 ### changeMyDevice
@@ -275,26 +273,6 @@ SpotifyWebAPI::followPlaylist($playlistId, $options)
 
 Add the current user as a follower of a playlist.<br>
 [https://developer.spotify.com/documentation/web-api/reference/follow/follow-playlist/](https://developer.spotify.com/documentation/web-api/reference/follow/follow-playlist/)
-
-#### Arguments
-* `$playlistId` **string** - ID or URI of the playlist to follow.
-* `$options` **array\|object** - Optional. Options for the followed playlist.
-    * bool public Optional. Whether the playlist should be followed publicly or not.
-
-
-#### Return values
-* **boolean** Whether the playlist was successfully followed.
-
----
-### followPlaylistForCurrentUser
-
-_Deprecated_
-
-```php
-SpotifyWebAPI::followPlaylistForCurrentUser($playlistId, $options)
-```
-
-Use SpotifyWebAPI::followPlaylist() instead.
 
 #### Arguments
 * `$playlistId` **string** - ID or URI of the playlist to follow.
@@ -928,21 +906,6 @@ Get recommendations based on artists, tracks, or genres.<br>
 * **array\|object** The requested recommendations. Type is controlled by the `return_assoc` option.
 
 ---
-### getReturnType
-
-_Deprecated_
-
-```php
-SpotifyWebAPI::getReturnType()
-```
-
-Use the `return_assoc` option instead.
-
-
-#### Return values
-* **string** A value indicating if the response body is an object or associative array.
-
----
 ### getRequest
 
 
@@ -1410,23 +1373,6 @@ Set options
 * **void** 
 
 ---
-### setReturnType
-
-_Deprecated_
-
-```php
-SpotifyWebAPI::setReturnType($returnType)
-```
-
-Use the `return_assoc` option instead.
-
-#### Arguments
-* `$returnType` **string** - One of the SpotifyWebAPI::RETURN_* constants.
-
-#### Return values
-* **void** 
-
----
 ### setSession
 
 
@@ -1490,23 +1436,6 @@ SpotifyWebAPI::unfollowPlaylist($playlistId)
 
 Remove the current user as a follower of a playlist.<br>
 [https://developer.spotify.com/documentation/web-api/reference/follow/unfollow-playlist/](https://developer.spotify.com/documentation/web-api/reference/follow/unfollow-playlist/)
-
-#### Arguments
-* `$playlistId` **string** - ID or URI of the playlist to unfollow.
-
-#### Return values
-* **boolean** Whether the playlist was successfully unfollowed.
-
----
-### unfollowPlaylistForCurrentUser
-
-_Deprecated_
-
-```php
-SpotifyWebAPI::unfollowPlaylistForCurrentUser($playlistId)
-```
-
-Use SpotifyWebAPI::unfollowPlaylist() instead.
 
 #### Arguments
 * `$playlistId` **string** - ID or URI of the playlist to unfollow.
