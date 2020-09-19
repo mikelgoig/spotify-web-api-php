@@ -257,7 +257,7 @@ class RequestTest extends PHPUnit\Framework\TestCase
         $request = new SpotifyWebAPI\Request();
         $response = $request->send('GET', 'https://httpbin.org/get');
 
-        $this->assertInternalType('array', $response['headers']);
+        $this->assertIsArray($response['headers']);
     }
 
     public function testSendHeadersParsingKey()
